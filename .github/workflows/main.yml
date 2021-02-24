@@ -53,10 +53,6 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
-          cd /root/realworld-nuxtjs
-          sudo apt-get install npm
-          wget https://github.com/Xin519/nextjsDemo/releases/latest/download/release.tgz -O release.tgz
-          tar zxvf release.tgz
           node -v
           npm -v
           pm2 -v
