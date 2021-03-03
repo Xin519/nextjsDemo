@@ -53,8 +53,9 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: |
+          source /etc/profile
           cd /root/realworld-nuxtjs
           wget https://github.com/Xin519/nextjsDemo/releases/latest/download/release.tgz -O release.tgz
           tar zxvf release.tgz
-          npm install --production
+          cnpm install --production
           pm2 reload pm2.config.json
